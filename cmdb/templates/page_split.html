@@ -1,11 +1,16 @@
 <html>
   <head>
     <style>
-      .dev-table, .dev-table td  {
-        border: 1px solid red;
+      .dev-title {
+        margin: 0 auto;
+        width: 100px;
+        font-size: 24px;
+       }
+      .dev-table, .dev-table td, .dev-table th  {
+        border: 1px solid #000000;
       }
       .dev-table {
-        margin:0 auto;
+        margin:20 auto;
         width: 900px;
         height: 39px;
 
@@ -13,17 +18,46 @@
       table {
         border-collapse: collapse;
       }
+      .page-split {
+        margin: 40px auto;
+        width: 500px;
+        #border: 1px solid red;
+      }
     </style>
   </head>
   <body>
+  <div class="dev-title">资产列表</div>
     <table class=dev-table >
+      <tr>
+        <th>设备ID</th>
+        <th>设备名</th>
+        <th>设备编号</th>
+        <th>型号</th>
+        <th>保管人</th>
+        <th>购买日期</th>
+        <th>用途</th>
+        <th>状态</th>
+      </tr>
       {% for Device in property %}
         <tr>
           <td>{{ Device.property_id }}</td>
           <td>{{ Device.property_name }}</td>
           <td>{{ Device.property_num }}</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td><a href="#">编辑</a></td>
         </tr>
       {% endfor %}
     </table>
+  <div class="page-split">
+    <a href="#">首页</a>
+      <a href="#">1</a>
+      <a href="#">2</a>
+      <a href="#">3</a>
+    <a href="#">尾页</a>
+  </div>
   </body>
 </html>

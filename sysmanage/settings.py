@@ -78,9 +78,10 @@ DATABASES = {
     'default': {
 	'ENGINE': 'django.db.backends.mysql',
         'NAME': 'sysmanage',
-        'USER': 'root',
-        'PASSWORD': 'aixocm',
-        'HOST': 'localhost',
+        'USER': 'sysmanage',
+        'PASSWORD': 'XB2henshui%',
+        'HOST': '106.13.18.145',
+        #'HOST': 'localhost',
         'PORT': '3306',
     }
 }

@@ -6,8 +6,10 @@ from cmdb.models import cmdb
 
 def get_property(request):
 #    try:
-        property = cmdb.objects.filter().values()
-        return render(request, 'page_split.html', {'property': property})
+        all_property = cmdb.objects.filter()
+        property = all_property.values()
+        property_count = all_property.count()
+        return render(request, 'page_split.html', {'property': property, 'property_count': property_count})
 #    except Exception as e:
-#        return HttpResponse('this is test!')
+#        return HttpResponse('{}')
 
