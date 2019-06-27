@@ -1,0 +1,29 @@
+<html>
+  <head>
+    <style>
+      .dev-table, .dev-table td  {
+        border: 1px solid red;
+      }
+      .dev-table {
+        margin:0 auto;
+        width: 900px;
+        height: 39px;
+
+      }
+      table {
+        border-collapse: collapse;
+      }
+    </style>
+  </head>
+  <body>
+    <table class=dev-table >
+      {% for Device in property %}
+        <tr>
+          <td>{{ Device.property_id }}</td>
+          <td>{{ Device.property_name }}</td>
+          <td>{{ Device.property_num }}</td>
+        </tr>
+      {% endfor %}
+    </table>
+  </body>
+</html>
